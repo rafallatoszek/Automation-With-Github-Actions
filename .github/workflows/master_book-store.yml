@@ -6,8 +6,6 @@ name: Build and deploy Node.js app to Azure Web App - book-store
 on:
   push:
     branches: [master]
-    paths:
-      - 'src/BookStore-SPA/**'
 
 jobs:
   build:
