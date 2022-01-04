@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'src/BookStore-SPA/**'
   workflow_dispatch:
 
 jobs:
