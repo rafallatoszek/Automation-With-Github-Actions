@@ -9,7 +9,6 @@ on:
       - master
     paths:
       - 'src/BookStore-SPA/**'
-  workflow_dispatch:
 
 jobs:
   build:
