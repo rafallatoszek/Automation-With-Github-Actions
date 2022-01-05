@@ -1,8 +1,6 @@
-name: .NET
+name: Build and test ASP.Net Core app - api-book-store
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
 
