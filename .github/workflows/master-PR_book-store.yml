@@ -2,7 +2,7 @@ name: Build and test Node.js app - book-store
 
 on:
   pull_request:
-    branches: [master]
+    branches: [ master ]
 
 jobs:
   build:
@@ -20,5 +20,5 @@ jobs:
         run: |
           npm install
           npm run build-prod --if-present
-          npm run test -- --watch=false --browsers=ChromeHeadless --source-map=false
+          npm run test --watch=false --browsers=ChromeHeadless --source-map=false
         working-directory: src/BookStore-SPA
