@@ -19,6 +19,5 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run build-prod --if-present
-          npm run test --watch=false --browsers=ChromeHeadless --source-map=false
+          npm run build-ci
         working-directory: src/BookStore-SPA
