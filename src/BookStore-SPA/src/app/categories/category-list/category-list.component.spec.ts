@@ -1,4 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ToastrModule } from 'ngx-toastr';
+import { ConfirmationDialogService } from 'src/app/_services/confirmation-dialog.service';
 
 import { CategoryListComponent } from './category-list.component';
 
@@ -8,7 +12,9 @@ describe('CategoryListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CategoryListComponent ]
+      imports: [ HttpClientModule, RouterTestingModule, ToastrModule.forRoot() ],
+      declarations: [ CategoryListComponent ],
+      providers: [ ConfirmationDialogService ]
     })
     .compileComponents();
   }));

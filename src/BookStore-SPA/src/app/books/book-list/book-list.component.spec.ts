@@ -1,4 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ToastrModule } from 'ngx-toastr';
+import { ConfirmationDialogService } from 'src/app/_services/confirmation-dialog.service';
 
 import { BookListComponent } from './book-list.component';
 
@@ -8,7 +12,9 @@ describe('BookListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BookListComponent ]
+      imports: [ HttpClientModule, RouterTestingModule, ToastrModule.forRoot() ],
+      declarations: [ BookListComponent ],
+      providers: [ ConfirmationDialogService ]
     })
     .compileComponents();
   }));
