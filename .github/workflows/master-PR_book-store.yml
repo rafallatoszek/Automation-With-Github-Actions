@@ -18,6 +18,6 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm install
+          npm ci
           npm run build-ci
         working-directory: src/BookStore-SPA
