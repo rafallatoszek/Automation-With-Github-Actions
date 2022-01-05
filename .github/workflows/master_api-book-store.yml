@@ -20,7 +20,7 @@ jobs:
         with:
           files: 'src/BookStore.API/appsettings.json'
         env:
-          ConnectionStrings.Default: ${{ secrets.CONNECTION_STRING }}
+          ConnectionStrings.DefaultConnection: ${{ secrets.CONNECTION_STRING }}
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
