@@ -23,7 +23,7 @@ jobs:
         run: |
           npm install
           npm run build-prod --if-present
-          npm run test -- --watch=false --browsers=ChromeHeadless --if-present
+          npm run test -- --watch=false --browsers=ChromeHeadless
         working-directory: src/BookStore-SPA
 
       - name: Upload artifact for deployment job
