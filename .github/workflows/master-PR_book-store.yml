@@ -1,0 +1,24 @@
+name: Build and test Node.js app - book-store
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build-prod --if-present
+          npm run test -- --watch=false --browsers=ChromeHeadless --source-map=false
+        working-directory: src/BookStore-SPA
