@@ -31,7 +31,7 @@ namespace BookStore.Infrastructure.Tests
                 var bookRepository = new BookRepository(context);
                 var books = await bookRepository.GetAll();
 
-                Assert.Null(books);
+                Assert.NotNull(books);
                 Assert.IsType<List<Book>>(books);
             }
         }
